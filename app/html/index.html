@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <aside class="aside">
+      @include('components/_logo.html')
+      @include('components/_menu.html')
+      @include('components/_profile.html')
+    </aside>
+    <main class="main">
+      @include('components/_header.html')
+      @include('components/_customers.html')
+
+      <!-- @include('components/_footer.html') -->
+    </main>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+.menu {
+  flex-grow: 1;
+  &__item {
+    border-radius: 8px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 8px;
+      top: 16px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../images/chevron.svg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    &--active {
+      background-color: $accent;
+      color: $lite;
+
+      .menu__item-icon {
+        fill: $lite;
+
+        &--stroke {
+          stroke: $lite;
+          fill: transparent;
+        }
+      }
+
+      &::after {
+        background-image: url("../../images/chevron--active.svg");
+      }
+
+      &:hover {
+        &::after {
+          background-image: url("../../images/chevron.svg");
+        }
+      }
+    }
+
+    &-icon {
+      fill: $lightblue;
+      transition:
+        fill 0.4s,
+        stroke 0.4s;
+
+      &--stroke {
+        stroke: $lightblue;
+        fill: transparent;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    padding: 11px 8px 11px 11px;
+    border-radius: 6px;
+    outline: 2px solid transparent;
+    transition:
+      outline-color 0.4s,
+      background-color 0.4s,
+      color 0.4s;
+
+    &:focus {
+      outline-color: rgba($accent, 0.7);
+    }
+
+    &:hover {
+      color: $accent;
+      background-color: $lite;
+
+      .menu__item-icon {
+        fill: $accent;
+
+        &--stroke {
+          stroke: $accent;
+          fill: transparent;
+        }
+      }
+    }
+
+    &:active {
+      background-color: rgba($accent, 0.5);
+      color: $lite;
+
+      .menu__item-icon {
+        fill: $lite;
+
+        &--stroke {
+          stroke: $lite;
+          fill: transparent;
+        }
+      }
+    }
+  }
+}
