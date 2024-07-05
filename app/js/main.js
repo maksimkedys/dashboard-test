@@ -69,6 +69,30 @@ const state = {
   customersMarkup: ''
 }
 
+// BURGER MENU, CLOSE ON ESC, OVERLAY NOSCROLLING 
+const burger = document.querySelector('.burger');
+const aside = document.querySelector('.aside');
+const overlay = document.querySelector('.overlay');
+const body = document.querySelector('.body');
+
+function toggleMenu() {
+  burger.classList.toggle('burger--active');
+  aside.classList.toggle('aside--active');
+  overlay.classList.toggle('hidden');
+  body.classList.toggle('lock')
+}
+
+burger.addEventListener('click', toggleMenu);
+overlay.addEventListener('click', toggleMenu);
+
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
+    toggleMenu();
+  }
+});
+
+// LOADING AND RENDERING CUSTOMERS DATA
 function loadCustomers() {
   let html = '';
   state.isLoading = true;
@@ -89,7 +113,6 @@ function loadCustomers() {
   state.isLoading = false;
   return state.customersMarkup = html;
 }
-
 const tableBody = document.querySelector('.table__body');
 function init() {
   loadCustomers();
@@ -97,12 +120,3 @@ function init() {
 }
 
 init();
-
-
-const burger = document.querySelector('.burger');
-const aside = document.querySelector('.aside');
-
-burger.addEventListener('click', function () {
-  burger.classList.toggle("burger--active");
-  aside.classList.toggle("aside--active");
-});

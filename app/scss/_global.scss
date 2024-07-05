@@ -22,7 +22,7 @@ body {
   padding-left: 71px;
 
   @include r($xl) {
-    padding: 40px 15px 0;
+    padding: 60px 15px 0;
     display: grid;
     justify-content: center;
   }
@@ -52,17 +52,48 @@ body {
   border-width: 0;
 }
 
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.lock {
+  overflow: hidden;
+}
+
 .burger {
   @include burger(35px, 22px, 2px, $accent);
   position: absolute;
   top: 15px;
   left: 15px;
   display: none;
-  z-index: 6;
-  @include r($xl) {
-    display: block;
+  z-index: 7;
+
+  &__bg {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background-color: rgba($color: #5932ea, $alpha: 0.3);
+    }
   }
-  @media (max-width: 992px) and (orientation: landscape) {
+
+  @include r($xl) {
     display: block;
   }
 }

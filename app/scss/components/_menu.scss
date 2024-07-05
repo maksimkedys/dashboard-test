@@ -14,7 +14,7 @@
         top: 16px;
         width: 16px;
         height: 16px;
-        background-image: url("../../images/chevron.svg");
+        background-image: url("../images/chevron.svg");
         background-repeat: no-repeat;
         background-size: auto;
         background-position: center center;
@@ -39,12 +39,12 @@
       }
 
       &.menu__item::after {
-        background-image: url("../../images/chevron--active.svg");
+        background-image: url("../images/chevron--active.svg");
       }
 
       &:hover {
         &::after {
-          background-image: url("../../images/chevron.svg");
+          background-image: url("../images/chevron.svg");
         }
       }
     }

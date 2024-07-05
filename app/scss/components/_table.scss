@@ -19,8 +19,11 @@
     text-align: left;
     white-space: nowrap;
     border-bottom: 1px solid #eeeeee;
-
     transition: scale 0.4s;
+
+    @include r($sm) {
+      padding: 15px 0;
+    }
 
     &:hover {
       scale: 1.01;

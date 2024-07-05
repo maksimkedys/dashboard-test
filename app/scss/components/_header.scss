@@ -2,6 +2,10 @@
   margin-bottom: 57px;
   color: $dark;
 
+  @include r($lg) {
+    margin-bottom: 35px;
+  }
+
   &__title {
     font-size: 24px;
   }
