@@ -1,3 +1,61 @@
 <div class="customers">
-
+  <div class="customers__header">
+    <div class="customers__box">
+      <h2 class="customers__title">All Customers</h2>
+      <p class="customers__text">Active Members</p>
+    </div>
+    <div class="customers__search">
+      <input class="search" type="search" placeholder="Search">
+    </div>
+  </div>
+  @include('_table.html')
+  <div class="customers__footer">
+    <p class="customers__info">
+      Showing data 1 to 8 of 256K entries
+    </p>
+    <ul class="customers__pagination">
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          <svg class="customers__pagination-icon" width="5" height="7">
+            <use href="images/sprite.svg#prev"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link current" href="#">
+          1
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          2
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          3
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          4
+        </a>
+      </li>
+      <li class="customers__pagination-dots">
+        <span>...</span>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          40
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          <svg class="customers__pagination-icon" width="5" height="7">
+            <use href="images/sprite.svg#next"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

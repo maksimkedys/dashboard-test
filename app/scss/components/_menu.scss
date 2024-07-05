@@ -1,21 +1,24 @@
 .menu {
   flex-grow: 1;
+
   &__item {
     border-radius: 8px;
     position: relative;
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 8px;
-      top: 16px;
-      width: 16px;
-      height: 16px;
-      background-image: url("../../images/chevron.svg");
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: center center;
+    &:not(:first-child) {
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 16px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../../images/chevron.svg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+      }
     }
 
     &:not(:last-child) {
@@ -35,7 +38,7 @@
         }
       }
 
-      &::after {
+      &.menu__item::after {
         background-image: url("../../images/chevron--active.svg");
       }
 

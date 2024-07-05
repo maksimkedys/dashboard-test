@@ -18,22 +18,26 @@ body {
 
 .main {
   flex-grow: 1;
+  padding-top: 41px;
   padding-left: 71px;
+
+  @include r($xl) {
+    padding: 40px 15px 0;
+    display: grid;
+    justify-content: center;
+  }
 }
 
 .wrapper {
   max-width: 1440px;
   width: 100%;
-  height: 100%;
+  min-height: 1200px;
   margin: 0 auto;
   display: flex;
-}
 
-.container {
-  max-width: 968px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
+  @include r($xl) {
+    min-height: auto;
+  }
 }
 
 .sr-only {
@@ -46,4 +50,19 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.burger {
+  @include burger(35px, 22px, 2px, $accent);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: none;
+  z-index: 6;
+  @include r($xl) {
+    display: block;
+  }
+  @media (max-width: 992px) and (orientation: landscape) {
+    display: block;
+  }
 }

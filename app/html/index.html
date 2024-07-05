@@ -12,6 +12,10 @@
 
 <body>
   <div class="wrapper">
+    <button class="burger" type="button">
+      <span class="burger__line"></span>
+      <span class="sr-only">Open menu</span>
+    </button>
     <aside class="aside">
       @include('components/_logo.html')
       @include('components/_menu.html')
@@ -20,8 +24,6 @@
     <main class="main">
       @include('components/_header.html')
       @include('components/_customers.html')
-
-      <!-- @include('components/_footer.html') -->
     </main>
   </div>
 

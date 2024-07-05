@@ -1,0 +1,132 @@
+.customers {
+  background-color: $lite;
+  border-radius: 30px;
+  padding: 32px 40px 40px 37px;
+  max-width: 968px;
+  width: 100%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+  @include r($lg) {
+    overflow-x: scroll;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+
+    @include r($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 22px;
+    color: $dark;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #16c098;
+  }
+
+  &__search {
+    position: relative;
+    margin-top: 4px;
+    margin-right: 13px;
+    max-width: 216px;
+    width: 100%;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 8px;
+      top: 7px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../images/search.svg");
+      background-size: contain;
+    }
+  }
+
+  .search {
+    width: 100%;
+    height: 38px;
+    padding: 7px 8px 7px 40px;
+    background-color: #f9fbff;
+    border-radius: 10px;
+    font-size: 12px;
+    outline: 2px solid transparent;
+    transition: outline-color 0.4s;
+
+    &::placeholder {
+      color: $grey;
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    &:focus {
+      outline-color: $accent;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r($sm) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    color: $grey;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &-item {
+      width: 25px;
+      height: 25px;
+    }
+
+    &-dots {
+      color: #404b52;
+      font-size: 12px;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 12px;
+      background-color: #f5f5f5;
+      color: #404b52;
+      border-radius: 4px;
+      border: 1px solid #eeeeee;
+
+      &.current {
+        color: $lite;
+        background-color: $accent;
+      }
+    }
+  }
+}
