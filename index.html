@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <button class="burger" type="button">
+      <span class="burger__line"></span>
+      <span class="sr-only">Open menu</span>
+    </button>
+    <aside class="aside">
+      <a class="aside__logo" href="#">
+  <img src="./images/logo.svg" alt="Dashboard logo">
+  <span class="aside__logo--version">v.01</span>
+</a>
+      <nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a href="#" class="menu__link">
+        <svg class="menu__item-icon menu__item-icon--stroke" width="24" height="24">
+          <use href="images/sprite.svg#key-square"></use>
+        </svg>
+        Dashboard
+      </a>
+    </li>
+    <li class="menu__item">
+      <a href="#" class="menu__link">
+        <svg class="menu__item-icon" width="24" height="24">
+          <use href="images/sprite.svg#3d-square"></use>
+        </svg>
+        Product
+      </a>
+    </li>
+    <li class="menu__item menu__item--active">
+      <a href="#" class="menu__link">
+        <svg class="menu__item-icon menu__item-icon--stroke" width="24" height="24">
+          <use href="images/sprite.svg#user-square"></use>
+        </svg>
+        Customers
+      </a>
+    </li>
+    <li class="menu__item ">
+      <a href="#" class="menu__link">
+        <svg class="menu__item-icon menu__item-icon--stroke" width="24" height="24">
+          <use href="images/sprite.svg#wallet-money"></use>
+        </svg>
+        Income
+      </a>
+    </li>
+    <li class="menu__item">
+      <a href="#" class="menu__link">
+        <svg class="menu__item-icon" width="24" height="24">
+          <use href="images/sprite.svg#discount-shape"></use>
+        </svg>
+        Promote
+      </a>
+    </li>
+    <li class="menu__item">
+      <a href="#" class="menu__link">
+        <svg class="menu__item-icon" width="24" height="24">
+          <use href="images/sprite.svg#message-question"></use>
+        </svg>
+        Help
+      </a>
+    </li>
+  </ul>
+</nav>
+      <div class="profile">
+  <img class="profile__avatar" src="./images/avatar.jpg" alt="profile avatar">
+  <div class="profile__info">
+    <p class="profile__name">Evano</p>
+    <p class="profile__position">Project Manager</p>
+  </div>
+</div>
+    </aside>
+    <main class="main">
+      <header class="header">
+  <h1 class="sr-only">Dashboard customers page</h1>
+  <p class="header__title">
+    Hello Evano 👋🏼,
+  </p>
+</header>
+      <div class="customers">
+  <div class="customers__header">
+    <div class="customers__box">
+      <h2 class="customers__title">All Customers</h2>
+      <p class="customers__text">Active Members</p>
+    </div>
+    <div class="customers__search">
+      <input class="search" type="search" placeholder="Search">
+    </div>
+  </div>
+  <table class="table">
+  <thead class="table__head">
+    <tr class="table__head-row table__row">
+      <th class="table__item">Customer Name</th>
+      <th class="table__item">Company</th>
+      <th class="table__item">Phone Number</th>
+      <th class="table__item">Email</th>
+      <th class="table__item">Country</th>
+      <th class="table__item status">Status</th>
+    </tr>
+  </thead>
+  <tbody class="table__body">
+  </tbody>
+</table>
+  <div class="customers__footer">
+    <p class="customers__info">
+      Showing data 1 to 8 of 256K entries
+    </p>
+    <ul class="customers__pagination">
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          <svg class="customers__pagination-icon" width="5" height="7">
+            <use href="images/sprite.svg#prev"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link current" href="#">
+          1
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          2
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          3
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          4
+        </a>
+      </li>
+      <li class="customers__pagination-dots">
+        <span>...</span>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          40
+        </a>
+      </li>
+      <li class="customers__pagination-item">
+        <a class="customers__pagination-link" href="#">
+          <svg class="customers__pagination-icon" width="5" height="7">
+            <use href="images/sprite.svg#next"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+    </main>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
